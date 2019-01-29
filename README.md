@@ -10,7 +10,8 @@ Once these predictions were made using a logistic regression method, I compared 
 When training the tech companies model, I again pulled one year of closing price data, this time from 5 prominent tech companies. These companies being Apple, Google, Netflix, Amazon and Facebook. I trained this model in the same fassion using a logistic regression algorithm.
 When looking at this portfolios relation to Tesla, I found the accuracy to be 70%.
 
-
+In this training it can be seen that based on the data of the past year, a model can be found with higher accuracy when comparing Tesla to tech companies than to automobile companies. 
+Thus my response to this quesiton of should Tesla be considered a tech or car company is that, even though Tesla is technically making cars, it should be considered a tech company. 
 
 
 
