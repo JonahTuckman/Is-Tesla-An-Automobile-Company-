@@ -1,5 +1,5 @@
 # IsTeslaAnAutomobileCompany-
-Using machine learning predictions to look at trends between well established automobile companies alongside Tesla. Will use accuracy rate to determine if a trend can be found.
+Using machine learning predictions to look at trends between well established automobile and tech companies alongside Tesla. Hoping to use model accuracies to determine which division Tesla finds the most accuracy under and thus where it can be categorized.
 
 ## Findings
 When training the two sets, I used Tesla as my independent variable used to test against. 
