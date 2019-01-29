@@ -1,4 +1,4 @@
-# IsTeslaAnAutomobileCompany-
+# Is Tesla An Automobile or a Tech Company?
 Using machine learning predictions to look at trends between well established automobile and tech companies alongside Tesla. Hoping to use model accuracies to determine which division Tesla finds the most accuracy under and thus where it can be categorized.
 
 ## Findings
