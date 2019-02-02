@@ -24,9 +24,13 @@ X = DataSet.iloc[:, 3:].values
 Y = DataSet.iloc[:, 2].values
 X_opt = X[:,[1,3,5,7,9]]
 
-from sklearn.model_selection import train_test_split
-X_train, X_test, Y_train, Y_test = train_test_split(X_opt, Y, test_size = 0.2, random_state = 0)
+#from sklearn.model_selection import train_test_split
+#X_train, X_test, Y_train, Y_test = train_test_split(X_opt, Y, test_size = 0.2, random_state = 0)
 
+X_train = X_opt[:200]
+X_test = X_opt[200:]
+Y_train = Y[:200]
+Y_test = Y[200:]
 
 from sklearn.linear_model import LinearRegression
 regressor = LinearRegression()
@@ -45,4 +49,4 @@ for i in range(50):
 percent = (count / 50) * 100
 print('%d Percent Accuracy' % percent)
 
-## Prediction Results in 54% Accuracy
+## Prediction Results in 66% Accuracy

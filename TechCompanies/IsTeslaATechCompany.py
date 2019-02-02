@@ -16,8 +16,18 @@ X = DataSet.iloc[:, 3:].values
 Y = DataSet.iloc[:, 2].values
 X_opt = X[:,[1,3,5,7,9]]
 
-from sklearn.model_selection import train_test_split
-X_train, X_test, Y_train, Y_test = train_test_split(X_opt, Y, test_size = 0.2, random_state = 0)
+#from sklearn.model_selection import train_test_split
+#X_train, X_test, Y_train, Y_test = train_test_split(X_opt, Y, test_size = 0.2, random_state = 0)
+
+
+
+### Question:: have to do it this way because cannot be randomized?
+## Must be in order because date is important
+X_train = X_opt[:201]
+X_test = X_opt[201:]
+Y_train = Y[:201]
+Y_test = Y[201:]
+
 
 from sklearn.linear_model import LinearRegression
 regressor = LinearRegression()
@@ -37,4 +47,12 @@ for i in range(50):
 percent = (count / 50) * 100
 print('%d Percent Accuracy' % percent)
 
-## Percentage is 70 Percent Accuracy
+## Percentage is 66 Percent Accuracy
+
+#Plot 
+
+
+## Horrible graph because based on rise or fall, not trend
+plt.plot(Y_train)
+plt.plot(Y_test)
+plt.plot(y_prediction)
