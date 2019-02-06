@@ -1,3 +1,4 @@
+
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 """
@@ -7,14 +8,22 @@ Created on Tue Jan 29 13:16:20 2019
 """
 
 import numpy as np
+from numpy import random
 import matplotlib.pyplot as plt
 import pandas as pd
+import os 
+from sklearn.preprocessing import MinMaxScaler
+from keras.models import Sequential
+from keras.layers import Dense, Dropout, LSTM
+
+os.chdir('/Users/JonahTuckman/Desktop/Projects/Is Tesla An Automobile Company?/TechCompanies')
 
 DataSet = pd.read_csv("FullDataSetTech.csv")
 X = DataSet.iloc[:, 3:].values
+X_opt = X[:,[1,3,5,7,9]]
 
 Y = DataSet.iloc[:, 2].values
-X_opt = X[:,[1,3,5,7,9]]
+
 
 #from sklearn.model_selection import train_test_split
 #X_train, X_test, Y_train, Y_test = train_test_split(X_opt, Y, test_size = 0.2, random_state = 0)
